@@ -1,0 +1,50 @@
+.Sign_in{
+    width: 450px;
+    background-color: rgb(244, 244, 244);
+    margin:auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+}
+.Topic{
+    margin-bottom: 20px;
+}
+.text_Input{
+    width: 100%;
+    border: none;
+    height: 45px;
+    margin: 7px 0;
+    border-radius: 8px;
+    padding: 0 8px;
+    transition: outline 50ms;
+    background-color: rgb(228, 232, 238);
+}
+.text_Input:focus{
+    outline: 2px solid rgb(123, 0, 255);
+}
+.checkbox{
+    margin: 30px 0 0 0;
+    color: rgb(123, 0, 255);
+}
+.checkbox label{
+    margin: 0 7px 0 0;
+}
+.submit_btn{
+    border: none;
+    margin-top: 20px;
+    background-color: red;
+    width: 100%;
+    color: white;
+    height: 50px;
+    border-radius: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, rgb(183, 0, 255) 0%, rgb(0, 132, 255) 51%, rgb(183, 0, 255) 100%);
+}
+.submit_btn:hover {
+    background-position: right center;
+}
