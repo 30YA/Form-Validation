@@ -30,8 +30,18 @@ function Sign_In() {
             [event.target.name]: true,
         })
     }
+    const submitHandler = event => {
+        event.preventDefault();
+        setTouched({
+            name: true,
+            email: true,
+            password: true,
+            confirm: true,
+            isAccepted: true
+        })
+    }
     return ( 
-        <form className="Sign_in">
+        <form className="Sign_in" onSubmit={submitHandler}>
             <h1 className="Topic">Sign-in</h1>
             <div>
                 {/* <label>Name</label> */}
@@ -43,11 +53,11 @@ function Sign_In() {
                 {errorrs.email && touched.email && <span className='error'>{errorrs.email}</span>}
             </div>
             <div>
-                <input name="password" className="text_Input" type="text" onChange={handler} onFocus={focusHandler} placeholder="Password"/>
+                <input name="password" className="text_Input" type="password" onChange={handler} onFocus={focusHandler} placeholder="Password"/>
                 {errorrs.password && touched.password &&  <span className='error'>{errorrs.password}</span>}
             </div>
             <div>
-                <input name="confirm" className="text_Input" type="text" onChange={handler} onFocus={focusHandler} placeholder="Password Confirm"/>
+                <input name="confirm" className="text_Input" type="password" onChange={handler} onFocus={focusHandler} placeholder="Password Confirm"/>
                 {errorrs.confirm && touched.confirm &&  <span className='error'>{errorrs.confirm}</span>}
             </div>
             <div className="checkbox">
@@ -56,7 +66,7 @@ function Sign_In() {
                 {errorrs.isAccepted && touched.isAccepted &&  <span className='error'>{errorrs.isAccepted}</span>}
             </div>
             <div>
-                <input className="submit_btn" type="submit" />
+                <button className="submit_btn" type="submit">Submit</button>
             </div>
         </form>
      );
