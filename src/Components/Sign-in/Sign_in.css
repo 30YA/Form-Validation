@@ -1,3 +1,6 @@
+#root{
+  width: 100%;
+}
 a{
   text-decoration: none;
   color: rgb(145, 0, 241);
@@ -10,6 +13,12 @@ a{
   flex-direction: column;
   padding: 30px 30px 10px 30px;
   border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  .Sign_in {
+    width: auto;
+    margin: 0 20px;
+  }
 }
 .Topic {
   margin-bottom: 20px;
@@ -30,39 +39,44 @@ a{
 .checkbox {
   margin: 30px 0 0 0;
   color: rgb(123, 0, 255);
-  position: relative;
 }
 .checkbox label {
   margin: 0 7px 0 0;
   cursor: pointer;
 }
+.accept-title{
+  margin-right: 10px;
+}
 .accept {
-  position: relative;
   display: none;
 }
 .custom_CheckBox {
-  position: absolute;
+  position: relative;
   background-color: transparent;
   border: 1px solid gray;
   border-radius: 30%;
   width: 20px;
   height: 20px;
-  left: 245px;
   top: 3px;
   color: black;
   font-size: 15px;
+  display: inline-block;
 }
 .accept:checked + .custom_CheckBox {
   border: none;
   background-color: rgb(0, 132, 255);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .accept:checked + .custom_CheckBox::before {
   content: "✔";
   color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
+/* @media screen and (max-width: 320px) {
+  
+} */
 .error {
   display: inline-block;
   background-color: rgb(255, 55, 55);

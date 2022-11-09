@@ -107,8 +107,7 @@ export default function Sign_In() {
         </div>
         <div className="checkbox">
           <label htmlFor="accept-id">
-            {" "}
-            <b>I accept terms of privacy policy</b>{" "}
+            <b className="accept-title">I accept terms of privacy policy</b>{" "}
             <input
               id="accept-id"
               name="isAccepted"
@@ -116,7 +115,7 @@ export default function Sign_In() {
               type="checkbox"
               onChange={handler}
             />
-            <span id="accept-id" className="custom_CheckBox"></span>
+            <div id="accept-id" className="custom_CheckBox"></div>
           </label>
           {errorrs.isAccepted && touched.isAccepted && (
             <span className="error last_error">{errorrs.isAccepted}</span>
